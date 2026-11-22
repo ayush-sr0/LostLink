@@ -267,9 +267,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
+function startDemoMode() {
+  localStorage.setItem('lostlink_demo_mode', 'true');
+  window.location.href = 'dashboard.html';
+}
+
 // Make functions accessible to HTML onclick / onsubmit attributes
 window.switchAuthMode = switchAuthMode;
 window.toggleModeFromFooter = toggleModeFromFooter;
 window.togglePasswordVisibility = togglePasswordVisibility;
 window.handleForgotPassword = handleForgotPassword;
 window.handleAuthSubmit = handleAuthSubmit;
+window.startDemoMode = startDemoMode;
